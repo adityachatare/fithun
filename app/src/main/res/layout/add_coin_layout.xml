@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_3sdp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/llPriceSelected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_border_background"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:paddingHorizontal="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/coinValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:background="@null"
+                android:fontFamily="@font/readex_pro_regular"
+                android:padding="@dimen/_8sdp"
+                android:singleLine="true"
+                android:gravity="center"
+                android:textColor="@color/theme_color"
+                android:textColorHint="@color/viewColor"
+                android:textSize="@dimen/_10sdp" />
+
+    </LinearLayout>
+
+</LinearLayout>

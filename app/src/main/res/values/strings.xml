@@ -1,0 +1,138 @@
+<resources>
+    <string name="app_name">Fit Hun</string>
+    <string name="logo">logo</string>
+    <string name="welcome">Welcome to Spirit of Fitness!</string>
+    <string name="welcome_message">Turn your steps into Coins(1₩=1₹) Achieve your fitness goals and Get started on the journey to a healthier you today!</string>
+    <string name="login">Login</string>
+    <string name="do_not_have_a_account_signup">Don’t have an account?</string>
+    <string name="already_have_a_account_signup">Already have an account?</string>
+    <string name="signup">Sign Up</string>
+    <string name="first_name">First Name</string>
+    <string name="firstName">Enter first name</string>
+    <string name="last_name">Last Name</string>
+    <string name="lastName">Enter last name</string>
+    <string name="tAndC">I agree to the</string>
+    <string name="and">and</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="term_Policy">Terms &amp; Conditions</string>
+    <string name="view_all"><u>View All</u></string>
+
+    <string-array name="gender">
+        <item>Select gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="physically_challenged">
+        <item>Select physically challenged</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="price">
+        <item>Select price</item>
+        <item>Low to high</item>
+        <item>High to low</item>
+    </string-array>
+
+    <string-array name="wallet_filter">
+        <item>Choose</item>
+        <item>All</item>
+        <item>Withdraw</item>
+        <item>Deposit</item>
+    </string-array>
+
+
+    <string-array name="event_type">
+        <item>Choose Contest Type</item>
+        <item>P2P</item>
+        <item>Walk A Thon</item>
+    </string-array>
+
+    <string-array name="select_date">
+        <item>Select Day</item>
+        <item>All</item>
+        <item>Today</item>
+        <item>Tomorrow</item>
+    </string-array>
+
+    <string-array name="select_fee">
+        <item>Select Entry Fee</item>
+        <item>₹1 to 50</item>
+        <item>₹51 to 100</item>
+        <item>₹101 to 1000</item>
+        <item>₹1001 and above</item>
+    </string-array>
+
+    <string-array name="select_spot">
+        <item>Select Spot</item>
+        <item>2</item>
+        <item>3 to 10</item>
+        <item>11 to 100</item>
+        <item>101 to 1000</item>
+        <item>1001 and above</item>
+    </string-array>
+
+
+    <string-array name="shoe_size">
+        <item>Select your shoe size</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+    </string-array>
+
+    <string-array name="dumbbell_size">
+        <item>1Kg</item>
+        <item>2Kg</item>
+        <item>3Kg</item>
+        <item>4Kg</item>
+        <item>5Kg</item>
+        <item>6Kg</item>
+        <item>7Kg</item>
+        <item>8Kg</item>
+        <item>9Kg</item>
+        <item>10Kg</item>
+        <item>11Kg</item>
+        <item>12Kg</item>
+        <item>13Kg</item>
+        <item>14Kg</item>
+        <item>15Kg</item>
+
+
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="size_chart"><u>Size Chart</u></string>
+
+    <string name="TERMS_AND_CONDITIONS">TERMS_AND_CONDITIONS</string>
+    <string name="LEGALITY_SCREENS">LEGALITY_SCREENS</string>
+    <string name="HELP_SUPPORT">HELP_SUPPORT</string>
+    <string name="PRIVACY_POLICY">PRIVACY_POLICY</string>
+    <string name="ABOUT_US">ABOUT_US</string>
+    <string name="COMUNITY_GUIDLINES">COMUNITY_GUIDLINES</string>
+    <string name="step_count">Step Count</string>
+    <string name="distance_walked">Distance Walked</string>
+
+    <string name="order_placed">Order placed</string>
+    <string name="order_placed_desc">Your order #212423 was placed on 09th \nApril 2022.</string>
+    <string name="see_all_updates">See All Updates</string>
+    <string name="order_confirmed">Order Confirmed</string>
+    <string name="delivered">Delivered</string>
+    <string name="your_item_has_been_delivered">Your item has been delivered</string>
+
+    <string name="track_order"><u>Track Order</u></string>
+
+</resources>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.activities.common.OtpVerificationActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:src="@drawable/arrow_back" />
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:fontFamily="@font/readex_pro_regular"
+            android:text="Otp Verification"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_12sdp" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/splash_icon" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OTP Vetification"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/readex_pro_regular"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:textSize="@dimen/_12sdp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:weightSum="6"
+                android:elevation="@dimen/_5sdp"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_border_background">
+
+                    <EditText
+                        android:id="@+id/et_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:autofillHints="smsOTPCode"
+                        android:background="@null"
+                        android:hint="*"
+                        android:importantForAutofill="yes"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:padding="10dp"
+                        android:textSize="@dimen/_12sdp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_border_background">
+
+                    <EditText
+                        android:id="@+id/et_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:autofillHints="smsOTPCode"
+                        android:background="@null"
+                        android:hint="*"
+                        android:importantForAutofill="yes"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:padding="10dp"
+                        android:textSize="@dimen/_12sdp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_border_background">
+
+                    <EditText
+                        android:id="@+id/et_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:autofillHints="smsOTPCode"
+                        android:background="@null"
+                        android:hint="*"
+                        android:importantForAutofill="yes"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:padding="10dp"
+                        android:textSize="@dimen/_12sdp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_border_background">
+
+                    <EditText
+                        android:id="@+id/et_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:autofillHints="smsOTPCode"
+                        android:background="@null"
+                        android:hint="*"
+                        android:importantForAutofill="yes"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:padding="10dp"
+                        android:textSize="@dimen/_12sdp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_border_background">
+
+                    <EditText
+                        android:id="@+id/et_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:autofillHints="smsOTPCode"
+                        android:background="@null"
+                        android:hint="*"
+                        android:importantForAutofill="yes"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:padding="10dp"
+                        android:textSize="@dimen/_12sdp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_border_background">
+
+                    <EditText
+                        android:id="@+id/et6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:autofillHints="smsOTPCode"
+                        android:background="@null"
+                        android:hint="*"
+                        android:importantForAutofill="yes"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:padding="10dp"
+                        android:textSize="@dimen/_12sdp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:fontFamily="@font/readex_pro_regular"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:textColor="@color/red" />
+
+
+            <TextView
+                android:id="@+id/timer"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/readex_pro_regular"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:gravity="end"
+                android:textColor="@color/theme_color" />
+
+
+            <RelativeLayout
+                android:id="@+id/NextButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:background="@drawable/red_button_image">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/readex_pro_light"
+                    android:text="Submit"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/ResendCode"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/readex_pro_regular"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:gravity="center"
+                android:text="Resend Code"
+                android:textSize="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:textColor="@color/text_color" />
+
+            <TextView
+                android:id="@+id/ResendCodeAgain"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/readex_pro_regular"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:gravity="center"
+                android:text="Resend Code"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:textColor="@color/theme_color" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

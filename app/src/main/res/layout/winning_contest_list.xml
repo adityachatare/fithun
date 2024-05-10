@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/Header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/winner_header_background"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/readex_pro_medium"
+            android:layout_weight="0.5"
+            android:text="Rank"
+            android:paddingVertical="@dimen/_10sdp"
+            android:paddingStart="@dimen/_25sdp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/readex_pro_medium"
+            android:layout_weight="0.5"
+            android:text="Winnings"
+            android:paddingVertical="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_25sdp"
+            android:gravity="center|end"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_background"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/rank"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/readex_pro_medium"
+            android:layout_weight="0.5"
+            android:text="#1"
+            android:paddingVertical="@dimen/_10sdp"
+            android:paddingStart="@dimen/_25sdp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/readex_pro_medium"
+            android:layout_weight="0.5"
+            android:text="₩ 500"
+            android:paddingVertical="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_25sdp"
+            android:gravity="center|end"
+            android:textColor="#B07A1D"
+            android:textSize="@dimen/_14sdp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

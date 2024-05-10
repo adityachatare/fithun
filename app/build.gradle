@@ -1,0 +1,191 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id("dagger.hilt.android.plugin")
+    id 'kotlin-kapt'
+    id 'kotlin-android'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.fithun'
+    compileSdk 34
+
+//    Key Store Path: C:\Users\Admin\Desktop\StepCount Android\walk-earn-mobile-development-23084139-android\app\Fit Hun.jks
+//    Password: Fit#Endurance2552@
+//    Alias: Fit Hun
+
+
+
+    defaultConfig {
+        applicationId "com.fithun"
+        minSdk 24
+        targetSdk 34
+        versionCode 12
+        versionName "1.5"
+
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+
+    buildFeatures{
+        viewBinding true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.google.android.gms:play-services-auth:20.7.0'
+    implementation 'com.google.mlkit:common:18.1.0'
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.9.1'
+    implementation 'androidx.work:work-runtime-ktx:2.9.0'
+    implementation 'androidx.activity:activity:1.8.0'
+    def lifecycle_version = "2.6.0-alpha01"
+    implementation 'androidx.multidex:multidex:2.0.1'
+    //noinspection GradleCompatible
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.annotation:annotation:1.5.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'androidx.core:core-ktx:1.3.0'
+
+    //noinspection GradleCompatible
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+    implementation 'com.hbb20:ccp:2.6.1'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+//    Android 12 Version
+//    implementation 'androidx.work:work-runtime-ktx:2.8.0-alpha04'
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:4.14.2"
+
+    // circle Indicator
+    implementation 'me.relex:circleindicator:2.1.6'
+
+    // image slider
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
+    implementation("com.tbuonomo:dotsindicator:4.3")
+
+    implementation 'com.karumi:dexter:6.2.3'
+
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+
+    // Coroutine Lifecycle Scopes
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
+
+    // ViewModel
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+
+    // LiveData
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+
+    // Lifecycles only (without ViewModel or LiveData)
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+
+    implementation 'androidx.fragment:fragment-ktx:1.5.4'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+//
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.10'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.10'
+
+    // Activity KTX for viewModels()
+    implementation "androidx.activity:activity-ktx:1.6.1"
+
+    // Dagger Hilt
+    implementation 'com.google.dagger:hilt-android:2.43.1'
+    kapt 'com.google.dagger:hilt-compiler:2.43.1'
+
+    // For instrumentation tests
+    androidTestImplementation 'com.google.dagger:hilt-android-testing:2.43.1'
+    kaptAndroidTest 'com.google.dagger:hilt-compiler:2.43.1'
+
+    // For local unit tests
+    testImplementation 'com.google.dagger:hilt-android-testing:2.43.1'
+    kaptTest 'com.google.dagger:hilt-compiler:2.43.1'
+
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
+    implementation 'androidx.activity:activity-compose:1.3.1'
+
+
+    implementation "android.arch.lifecycle:extensions:1.1.0"
+
+    // for using rx observables
+    implementation("io.reactivex.rxjava3:rxkotlin:3.0.0")
+
+    // using multi dex to avoid 65k function
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation "com.github.bumptech.glide:glide:4.14.2"
+
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
+    // Firebase
+
+    implementation(platform("com.google.firebase:firebase-bom:31.2.1"))
+    implementation 'com.google.firebase:firebase-messaging'
+
+    // payement gateway
+    implementation 'com.razorpay:checkout:1.6.33'
+
+    implementation "com.android.volley:volley:1.2.1"     // adding volley dependency
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.7.20"
+
+    implementation "com.google.android.exoplayer:exoplayer:2.19.1"
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+
+    implementation "androidx.paging:paging-runtime-ktx:3.0.1"
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
+
+    implementation 'com.airbnb.android:lottie:3.4.2'
+
+
+
+}

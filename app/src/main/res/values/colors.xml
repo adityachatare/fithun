@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="welcome_message">#FFFFFFBF</color>
+    <color name="theme_color">#8E68FE</color>
+    <color name="text_color">#262626</color>
+    <color name="light_color_text">#646266</color>
+    <color name="red">#FF0000</color>
+    <color name="view_Background">#EAEAEA</color>
+    <color name="hintColor">#949299</color>
+    <color name="input_color">#262626</color>
+    <color name="viewColor">#AAAAAA</color>
+    <color name="check_color">#FA3A33</color>
+    <color name="greenish_color">#F4F4FB</color>
+    <color name="grey">#CCCCCC</color>
+    <color name="pink_color">#FE4F97</color>
+    <color name="blue_color">#4067D6</color>
+    <color name="green_color">#2FB18B</color>
+    <color name="price_color">#B07A1D</color>
+    <color name="speed_meter_text_color">#262626</color>
+
+    <!-- For password Validation-->
+
+
+    <color name="password_valid_background">#DED3FF</color>
+    <color name="password_text_color">#888888</color>
+    <color name="status_bar">#8070B7</color>
+    
+    
+    <color name="calories_progress_background">#D2E9A0</color>
+    <color name="calories_progress">#9ACF2A</color>
+
+    <color name="new_test">#9ACF2A</color>
+
+
+
+
+</resources>

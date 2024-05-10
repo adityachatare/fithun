@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.activities.common.ViewProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:src="@drawable/arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:fontFamily="@font/readex_pro_regular"
+            android:text="My Profile"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_12sdp" />
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="8dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userProfile"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/placeholder"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/white_border_background"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/name"
+                    android:maxLines="2"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/readex_pro_regular"
+                    android:layout_marginStart="@dimen/_5sdp"
+                  />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/viewColor"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginTop="-5dp"
+                    android:fontFamily="@font/readex_pro_light"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="Name"/>
+
+
+                <TextView
+                    android:id="@+id/email"
+                    android:maxLines="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="@font/readex_pro_regular"
+                    android:layout_marginStart="@dimen/_5sdp"
+                   />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/viewColor"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginTop="-5dp"
+                    android:fontFamily="@font/readex_pro_light"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="Email"/>
+
+
+                <TextView
+                    android:id="@+id/mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="@font/readex_pro_regular"
+                    android:layout_marginStart="@dimen/_5sdp"
+                   />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/viewColor"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginTop="-5dp"
+                    android:fontFamily="@font/readex_pro_light"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="Number"/>
+
+
+                <TextView
+                    android:id="@+id/gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="@font/readex_pro_regular"
+                    android:layout_marginStart="@dimen/_5sdp"
+                   />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/viewColor"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginTop="-5dp"
+                    android:fontFamily="@font/readex_pro_light"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="Gender"/>
+
+
+                <TextView
+                    android:id="@+id/datebirth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="@font/readex_pro_regular"
+                    android:layout_marginStart="@dimen/_5sdp"
+                   />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/viewColor"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginTop="-5dp"
+                    android:fontFamily="@font/readex_pro_light"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="Date of Birth"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/white_border_background"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/upId"
+                    android:maxLines="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/readex_pro_regular"
+                    android:layout_marginStart="@dimen/_5sdp"
+                   />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/viewColor"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginTop="-5dp"
+                    android:fontFamily="@font/readex_pro_light"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="UPI ID"/>
+
+
+                <TextView
+                    android:id="@+id/linkedUpi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="@font/readex_pro_regular"
+                    android:layout_marginStart="@dimen/_5sdp"
+                   />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/viewColor"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginTop="-5dp"
+                    android:fontFamily="@font/readex_pro_light"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="Number Linked with UPI Id"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/white_border_background"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/homeAdd"
+                    android:maxLines="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/readex_pro_regular"
+                    android:layout_marginStart="@dimen/_5sdp"
+                   />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/viewColor"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginTop="-5dp"
+                    android:fontFamily="@font/readex_pro_light"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="Home Address"/>
+
+
+                <TextView
+                    android:id="@+id/officeId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:maxLines="3"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="@font/readex_pro_regular"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/viewColor"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginTop="-5dp"
+                    android:fontFamily="@font/readex_pro_light"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="Office Address"/>
+
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/passwordOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:background="@drawable/white_border_background"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="@font/readex_pro_regular"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:text="*********"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/viewColor"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_marginTop="-8dp"
+                        android:fontFamily="@font/readex_pro_light"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:text="Password"/>
+
+
+                </LinearLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#02BB8F"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_centerVertical="true"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    android:layout_alignParentEnd="true">
+
+                    <TextView
+                        android:id="@+id/changePassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Change"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="@font/readex_pro_light"
+                        android:textColor="@color/white"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:paddingHorizontal="@dimen/_12sdp"/>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/updateProfileClick"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:clickable="true"
+                android:layout_marginVertical="@dimen/_30sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:focusable="true"
+                android:background="@drawable/red_button_image">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/readex_pro_regular"
+                    android:text="Edit"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+</LinearLayout>

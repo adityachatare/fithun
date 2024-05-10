@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.fithun">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" /> <!-- Android version 14 application was crashing -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <data android:scheme="http" />
+        </intent>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".DreamWalkApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_square"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_square"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WalkAndEarn"
+        android:usesCleartextTraffic="false"
+        tools:targetApi="33">
+
+        <activity
+            android:name=".ui.activities.product.PaymentWebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.product.ProductTrackingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.common.HowToPlayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.product.OrderHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.product.ViewOrderHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.loginFlow.AdditionalDetails"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.product.ProductDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.common.PaymentModeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.loginFlow.ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.loginFlow.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.common.ViewProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.product.AddAddressActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.common.OffersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.common.InviteFriendsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.common.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.wallet.TransactionHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.common.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.common.FaqActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.common.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/TranslucentStatusBarActivityTheme" />
+        <activity
+            android:name=".ui.activities.contest.WinnerUsersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.common.OtpVerificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.wallet.RedeemCoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.wallet.VerifyAccountActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.wallet.AddCoinActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.wallet.MyWalletActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.product.OrderReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.product.ChooseDeliveryAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.product.ProductCartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.contest.CompletedContestActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.activities.contest.StepContestUpdateActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.activities.contest.ViewStepContestActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.activities.contest.StepContestActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.activities.loginFlow.ForgotPasswordActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.activities.loginFlow.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.loginFlow.SignUpActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.common.StaticContentActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified" />
+
+        <activity
+            android:name=".ui.activities.loginFlow.WelcomeScreenActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified"
+            android:theme="@style/TranslucentStatusBarActivityTheme" />
+
+        <activity
+            android:name=".ui.hostFragment.FragmentHostActivity"
+            android:exported="true"
+            android:screenOrientation="unspecified"
+            android:theme="@style/TranslucentStatusBarActivityTheme"
+            android:windowSoftInputMode="adjustPan|stateVisible|adjustResize" />
+        <activity
+            android:name=".ui.activities.loginFlow.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="unspecified"
+            android:theme="@style/SplashActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".backgroundService.StartReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.fithun.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name="com.razorpay.CheckoutActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@style/CheckoutTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <data
+                    android:host="rzp.io"
+                    android:scheme="io.rzp" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".backgroundService.EndlessService"
+            android:enabled="true"
+            android:foregroundServiceType="location|dataSync"
+            android:stopWithTask="false" />
+        <service
+            android:name=".firebaseMessaging.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.razorpay.RzpTokenReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="rzp.device_token.share" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".backgroundService.ClearPreferenceReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_Iual45CJbwrtr7" />
+    </application>
+
+</manifest>

@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefresh"
+    tools:context=".ui.bottomTab.HomeFragment">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/storeViewpager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp" />
+
+            <me.relex.circleindicator.CircleIndicator3
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:visibility="visible"
+                app:ci_drawable="@drawable/selected_indicator"
+                app:ci_drawable_unselected="@drawable/unselected_indicator"
+                tools:ignore="MissingClass" />
+
+            <LinearLayout
+                android:id="@+id/winnerBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:weightSum="1"
+                android:background="@drawable/gradient_img">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="0.4"
+                    app:layout_constraintEnd_toStartOf="@+id/mainView">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/userProfile"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/gradient_boundary"
+                        android:padding="@dimen/_12sdp"
+                        android:src="@drawable/placeholder"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="@dimen/_2sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/readex_pro_medium"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/userProfile" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mainView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/username"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="0.6"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="@drawable/gradient_boundary2">
+
+                    <ImageView
+                        android:id="@+id/winningimg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/winning_img"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/view"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/WinningText"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/WinningText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WINNER"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/readex_pro_medium"
+                        app:layout_constraintStart_toEndOf="@+id/winningimg"
+                        app:layout_constraintTop_toTopOf="@+id/winningimg"
+                        app:layout_constraintBottom_toBottomOf="@+id/winningimg"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textSize="@dimen/_15sdp"/>
+
+                    <View
+                        android:id="@+id/view"
+                        app:layout_constraintTop_toBottomOf="@+id/winningimg"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/stepsCounts"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:background="#941d48" />
+
+                    <TextView
+                        android:id="@+id/stepsCounts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/readex_pro_medium"
+                        app:layout_constraintStart_toStartOf="@+id/winningimg"
+                        app:layout_constraintTop_toBottomOf="@+id/view"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:textSize="@dimen/_19sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:includeFontPadding="false"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Steps"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        app:layout_constraintStart_toEndOf="@+id/stepsCounts"
+                        app:layout_constraintBottom_toBottomOf="@+id/stepsCounts"
+                        android:textSize="@dimen/_10sdp"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:src="@drawable/arrow_forward"
+                        android:rotation="180"
+                        android:visibility="invisible"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        app:layout_constraintTop_toTopOf="@+id/stepsCounts"
+                        app:layout_constraintEnd_toEndOf="@+id/view"
+                        app:layout_constraintBottom_toBottomOf="@+id/stepsCounts"
+                        android:background="@drawable/button_boarder_purple"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:elevation="@dimen/_2sdp"
+                app:cardCornerRadius="@dimen/_20sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:fontFamily="@font/readex_pro_regular"
+                            android:gravity="center"
+                            android:text="@string/step_count"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            android:id="@+id/stepsCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:fontFamily="@font/readex_pro_semi_bold"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/speed_meter_text_color"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:fontFamily="@font/readex_pro_regular"
+                            android:gravity="center"
+                            android:text="@string/distance_walked"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            android:id="@+id/totalKm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:fontFamily="@font/readex_pro_semi_bold"
+                            android:gravity="center"
+                            android:text="0.0Km"
+                            android:textColor="@color/speed_meter_text_color"
+                            android:textSize="@dimen/_13sdp" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/speedoMeter"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/circle_image_one" />
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="90dp"
+                            android:gravity="center"
+                            android:layout_marginBottom="@dimen/_3sdp"
+
+                            android:layout_gravity="center">
+
+                            <ImageView
+                                android:id="@+id/rotationHandImage"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:src="@drawable/circle_image_two" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|bottom"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/kmPerHour"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:fontFamily="@font/readex_pro_bold"
+                                android:gravity="center"
+                                android:text="0.0"
+                                android:textColor="@color/speed_meter_text_color"
+                                android:textSize="@dimen/_13sdp" />
+
+                            <TextView
+                                android:id="@+id/speedUnit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:fontFamily="@font/readex_pro_regular"
+                                android:textColor="@color/speed_meter_text_color"
+                                android:layout_marginTop="-10dp"
+                                android:gravity="center"
+                                android:text="m/s"
+                                android:textSize="@dimen/_10sdp" />
+
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:id="@+id/upcomingHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/readex_pro_regular"
+                    android:text="Upcoming Contest"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+
+                <TextView
+                    android:id="@+id/ViewAllContest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/readex_pro_regular"
+                    android:gravity="end"
+                    android:text="@string/view_all"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/_11sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/upcomingContestView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:background="@drawable/contest_border_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_margin="@dimen/_8sdp">
+
+
+                        <ImageView
+                            android:id="@+id/contestImage"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:src="@drawable/contest_image" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.5"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/contestTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/readex_pro_medium"
+                                    android:text="H2H Contest"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_11sdp" />
+
+                                <TextView
+                                    android:id="@+id/contestSubTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/readex_pro_light"
+                                    android:text="Head to head"
+                                    android:maxLines="2"
+                                    android:textColor="@color/viewColor"
+                                    android:textSize="@dimen/_10sdp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:gravity="end">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingHorizontal="@dimen/_8sdp"
+                                    android:paddingVertical="@dimen/_5sdp"
+                                    android:background="@drawable/pink_background">
+
+
+                                    <TextView
+                                        android:id="@+id/countDownTimer"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/readex_pro_regular"
+                                        android:gravity="center"
+                                        android:text="03m 50s"
+                                        android:layout_marginStart="@dimen/_5sdp"
+                                        android:textAllCaps="false"
+                                        android:textColor="#DE3041"
+                                        android:textSize="@dimen/_11sdp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="@dimen/_8sdp"
+                        android:background="@drawable/contest_border_background"
+                        android:weightSum="1">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="0.5">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Start Time - "
+                                android:fontFamily="@font/readex_pro_regular"
+                                android:textColor="@color/black"
+                                android:alpha="0.4"
+                                android:textSize="@dimen/_10sdp"/>
+
+                            <TextView
+                                android:id="@+id/startTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/readex_pro_regular"
+                                android:textColor="@color/black"
+                                android:alpha="0.6"
+                                android:textSize="@dimen/_12sdp"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:background="@color/viewColor" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="0.5">
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="End Time - "
+                                android:gravity="center"
+                                android:fontFamily="@font/readex_pro_regular"
+                                android:textColor="@color/black"
+                                android:alpha="0.4"
+                                android:textSize="@dimen/_10sdp"/>
+
+                            <TextView
+                                android:id="@+id/endTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:fontFamily="@font/readex_pro_regular"
+                                android:textColor="@color/black"
+                                android:alpha="0.6"
+                                android:textSize="@dimen/_12sdp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginHorizontal="@dimen/_8sdp"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:background="@drawable/pink_border_background">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/readex_pro_light"
+                                android:text="Pool Prize "
+                                android:textAllCaps="false"
+                                android:textColor="#DE3041"
+                                android:textSize="@dimen/_11sdp" />
+
+                            <TextView
+                                android:id="@+id/poolPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/readex_pro_regular"
+                                android:text="₩25"
+                                android:textAllCaps="false"
+                                android:textColor="#DE3041"
+                                android:textSize="@dimen/_11sdp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_weight="1.2"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:background="@drawable/green_border_background">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/readex_pro_light"
+                                android:text="Entry Fee "
+                                android:textAllCaps="false"
+                                android:textColor="#2FB18B"
+                                android:textSize="@dimen/_11sdp" />
+
+                            <TextView
+                                android:id="@+id/entryPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/readex_pro_regular"
+                                android:text="₩25"
+                                android:textAllCaps="false"
+                                android:textColor="#2FB18B"
+                                android:textSize="@dimen/_11sdp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_weight="0.7"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:background="@drawable/theme_border_background">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/readex_pro_light"
+                                android:text="Spot "
+                                android:textAllCaps="false"
+                                android:textColor="#4067D6"
+                                android:textSize="@dimen/_11sdp" />
+
+                            <TextView
+                                android:id="@+id/spot"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/readex_pro_regular"
+                                android:gravity="center"
+                                android:text="2"
+                                android:textAllCaps="false"
+                                android:textColor="#4067D6"
+                                android:textSize="@dimen/_11sdp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginVertical="@dimen/_15sdp"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_12sdp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_30sdp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/trophy_winner" />
+
+
+                                <TextView
+                                    android:id="@+id/firstPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="₩20"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:fontFamily="@font/readex_pro_medium"
+                                    android:textColor="#B07A1D"
+                                    android:textSize="@dimen/_12sdp" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+                                android:gravity="end">
+
+
+
+                                <LinearLayout
+                                    android:id="@+id/joinNowClick"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:background="@drawable/red_background"
+                                    android:focusable="true">
+
+                                    <TextView
+                                        android:id="@+id/joinNowClickButton"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/readex_pro_light"
+                                        android:gravity="center"
+                                        android:paddingHorizontal="@dimen/_15sdp"
+                                        android:paddingVertical="@dimen/_4sdp"
+                                        android:text="Join"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_12sdp" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/readex_pro_regular"
+                    android:text="Catalogue"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+
+                <TextView
+                    android:id="@+id/ViewAllCatalogue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/readex_pro_regular"
+                    android:gravity="end"
+                    android:text="@string/view_all"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/_11sdp" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/productCatalogue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"/>
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

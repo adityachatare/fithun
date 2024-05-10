@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "650940935473",
+    "project_id": "fit-hun-89ca5",
+    "storage_bucket": "fit-hun-89ca5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650940935473:android:eab317068c637ade43d410",
+        "android_client_info": {
+          "package_name": "com.fithun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "650940935473-5s706t10jtuqe4843ng1kr7dfkfjcphc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fithun",
+            "certificate_hash": "b3e3eb2939f7f577faf32bfcbb766460243d7a94"
+          }
+        },
+        {
+          "client_id": "650940935473-htbsr2g6m5pm8oi8paoql74gma6poq3j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fithun",
+            "certificate_hash": "72df8e3abaf028688ea71b0f5e99a2c1f689aab2"
+          }
+        },
+        {
+          "client_id": "650940935473-7g0g76v1bj3o75fg7bpp9g4nve6tarvl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlJR-4vSLGukhEW4VfiE43K2sySVD0TJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "650940935473-7g0g76v1bj3o75fg7bpp9g4nve6tarvl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "650940935473-48d98kdnfdfe79a3d06haje07uorfjav.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fitrun.dist"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
