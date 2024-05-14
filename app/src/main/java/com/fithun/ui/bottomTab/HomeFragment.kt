@@ -247,9 +247,9 @@ class HomeFragment : Fragment(), AddProductCart {
                             try {
                                 try {
                                     if (response.data?.responseCode == 200){
-
+println("Upcomming Contest")
                                         with(response.data.result){
-
+println("Resp : ${response.data.result.id}")
                                             if(!heading.isNullOrEmpty()) {
                                                 binding.upcomingContestView.visibility = View.VISIBLE
                                                 binding.upcomingHeader.visibility = View.VISIBLE

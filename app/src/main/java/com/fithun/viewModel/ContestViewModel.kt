@@ -112,7 +112,10 @@ class ContestViewModel @Inject constructor(app: Application, private val repo: D
                 .catch { e ->
                     contestListData.value = Resource.Error(AndroidExtension.manageMessages(e))
                 }.collect { data ->
+                    print("Else")
+
                     contestListData.value = contestListResponseHandle(data)
+//                    print(contestListResponseHandle(data))
                 }
         } else {
             contestListData.value = Resource.Error(Constants.NO_INTERNET)
@@ -256,7 +259,7 @@ class ContestViewModel @Inject constructor(app: Application, private val repo: D
     fun myContestListApi(token: String, page:Int
                         ,limit:Int) = viewModelScope.launch {
         myContestListData.value = Resource.Loading()
-
+        println("In mycontest")
         if (networkHelper.hasInternetConnection()) {
 
             repo.myContestListApi(token=token,page= page,
@@ -264,6 +267,7 @@ class ContestViewModel @Inject constructor(app: Application, private val repo: D
                 .catch { e ->
                     myContestListData.value = Resource.Error(AndroidExtension.manageMessages(e))
                 }.collect { data ->
+                    println("Received data: $data")
                     myContestListData.value = myContestListHandleResponse(data)
                 }
         } else {

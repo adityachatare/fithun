@@ -10,8 +10,18 @@ object Constants {
 
 
     //     PRODUCTION URLS
-    const val BASE_URL = "https://node.fit-hun.com/api/"
-    var SERVICE_URL = "https://node.fit-hun.com/api/step/createStep"
+//    const val BASE_URL = "https://node.fit-hun.com/api/"
+//    var SERVICE_URL = "https://node.fit-hun.com/api/step/createStep"
+//    const val PAYMENT_URl = "https://node.fit-hun.com"
+
+    //     TEST URLS
+//    const val BASE_URL = "http://35.154.228.222:2000/api/"
+//    var SERVICE_URL = "http://35.154.228.222:2000/api/step/createStep"
+//    const val PAYMENT_URl = "https://node.fit-hun.com"
+
+    //QA URLS
+    const val BASE_URL = "http://35.154.228.222:3500/api/"
+    var SERVICE_URL = "http://35.154.228.222:3500/api/step/createStep"
     const val PAYMENT_URl = "https://node.fit-hun.com"
 
 
